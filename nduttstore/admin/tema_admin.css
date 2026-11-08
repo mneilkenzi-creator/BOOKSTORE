@@ -1,0 +1,270 @@
+:root {
+    --admin-purple: #7554e8;
+    --admin-purple-dark: #5335c8;
+    --admin-navy: #17172b;
+    --admin-bg: #f7f7fb;
+    --admin-text: #20243a;
+    --admin-muted: #8b90a5;
+    --admin-line: #ececf4;
+    --admin-white: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--admin-bg);
+    color: var(--admin-text);
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+a {
+    transition: .2s ease;
+}
+
+.sidebar {
+    background: var(--admin-navy) !important;
+    color: white;
+}
+
+.sidebar .menu,
+.sidebar .nav-link {
+    color: #b5b5cb;
+    border-radius: 11px;
+    transition: .2s ease;
+}
+
+.sidebar .menu:hover,
+.sidebar .nav-link:hover {
+    background: #292941;
+    color: white;
+}
+
+.sidebar .menu.active,
+.sidebar .nav-link.active {
+    background: linear-gradient(100deg, #7957eb, #6745d8);
+    color: white;
+}
+
+.main,
+.content,
+.container {
+    color: var(--admin-text);
+}
+
+h1, h2, h3 {
+    letter-spacing: -.4px;
+}
+
+.panel,
+.card,
+.stat,
+.stat-card,
+.content-box,
+.table-container {
+    background: var(--admin-white);
+    border: 1px solid var(--admin-line);
+    border-radius: 17px;
+    box-shadow: 0 5px 20px #28224d05;
+}
+
+button,
+.btn,
+.button,
+a.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 11px 15px;
+    border: 0;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn-primary,
+.btn-tambah,
+.btn-simpan,
+button[type="submit"] {
+    background: var(--admin-purple);
+    color: white;
+}
+
+.btn-primary:hover,
+.btn-tambah:hover,
+.btn-simpan:hover,
+button[type="submit"]:hover {
+    background: var(--admin-purple-dark);
+}
+
+.btn-edit,
+.btn-warning {
+    background: #eee8ff;
+    color: #6545d2;
+}
+
+.btn-hapus,
+.btn-danger {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px 13px;
+    border: 1px solid #dfe4ed;
+    border-radius: 10px;
+    background: white;
+    color: var(--admin-text);
+    font-family: inherit;
+    font-size: 13px;
+    outline: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--admin-purple);
+    box-shadow: 0 0 0 3px #7554e81a;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+thead {
+    background: #fbfbfe;
+}
+
+th {
+    padding: 14px 17px;
+    color: #969aae;
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: .7px;
+    font-size: 10px;
+}
+
+td {
+    padding: 15px 17px;
+    border-top: 1px solid #f0f0f6;
+    font-size: 12px;
+}
+
+tbody tr:hover {
+    background: #fcfbff;
+}
+
+.badge,
+.status,
+.label-status {
+    display: inline-block;
+    padding: 7px 10px;
+    border-radius: 8px;
+    background: #eee8ff;
+    color: #6545d2;
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.status-menunggu {
+    background: #fff1d9;
+    color: #b66b0d;
+}
+
+.status-proses {
+    background: #e6efff;
+    color: #3567c9;
+}
+
+.status-dikirim {
+    background: #eee7ff;
+    color: #7046d6;
+}
+
+.status-selesai {
+    background: #ddf8e9;
+    color: #14845a;
+}
+
+.alert,
+.error {
+    padding: 13px 15px;
+    border-radius: 11px;
+    margin-bottom: 17px;
+    font-size: 12px;
+}
+
+.alert-success {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.alert-danger,
+.error {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.page-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 22px;
+}
+
+.page-heading p {
+    color: var(--admin-muted);
+    font-size: 12px;
+    margin-top: 6px;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.search-form input {
+    min-width: 210px;
+}
+
+@media (max-width: 700px) {
+    .page-heading {
+        align-items: stretch;
+    }
+
+    .search-form {
+        width: 100%;
+    }
+
+    .search-form input {
+        min-width: 0;
+    }
+
+    .table-container {
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 650px;
+    }
+}
